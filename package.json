@@ -1,0 +1,37 @@
+{
+    "name": "learner",
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": "git@github.com:mrx7355608/learner.git",
+    "author": "mrx7355608 <mrx7355608@gmail.com>",
+    "license": "MIT",
+    "type": "module",
+    "scripts": {
+        "start": "node src/index.js",
+        "test": "echo \"no tests found\"",
+        "dev": "nodemon src/index.js"
+    },
+    "dependencies": {
+        "bcryptjs": "^2.4.3",
+        "connect-mongo": "^5.1.0",
+        "cors": "^2.8.5",
+        "dotenv": "^16.4.5",
+        "express": "^4.19.2",
+        "express-session": "^1.18.0",
+        "helmet": "^7.1.0",
+        "hpp": "^0.2.3",
+        "mongoose": "^8.3.2",
+        "morgan": "^1.10.0",
+        "passport": "^0.7.0",
+        "passport-google-oauth20": "^2.0.0"
+    },
+    "devDependencies": {
+        "@eslint/eslintrc": "^3.0.2",
+        "@eslint/js": "^9.1.1",
+        "eslint": "^7.32.0 || ^8.2.0",
+        "eslint-config-airbnb-base": "^15.0.0",
+        "eslint-plugin-import": "^2.25.2",
+        "globals": "^15.0.0",
+        "nodemon": "^3.1.0"
+    }
+}
