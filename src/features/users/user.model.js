@@ -5,40 +5,35 @@ const userSchema = new Schema(
     {
         fullname: { type: String, required: true },
         email: { type: String, required: true },
-        password: { type: String },
-        googleId: { type: String, default: null },
+        googleId: { type: String, required: true },
         profilePicture: {
             type: String,
             default:
                 "https://res.cloudinary.com/doemiclic/image/upload/v1693055588/default_user_eqn3vt.png",
         },
         about: { type: String, default: "" },
-        followers: {
+        courses_created: {
             type: [
                 {
                     type: Schema.Types.ObjectId,
-                    ref: "User",
+                    ref: "Course",
                 },
             ],
             default: [],
         },
-        following: {
+        courses_enrolledin: {
             type: [
                 {
                     type: Schema.Types.ObjectId,
-                    ref: "User",
+                    ref: "Course",
                 },
             ],
-            default: [],
-        },
-        topicsInterestedIn: {
-            type: [String],
             default: [],
         },
     },
     {
         timestamps: true,
-    }
+    },
 );
 
 // Pre document middleware to hash password

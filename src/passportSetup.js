@@ -21,7 +21,6 @@ export default function passportSetup() {
                     googleId: profile.id,
                     fullname: `${profile.name.givenName} ${profile.name.familyName}`,
                     email: profile.emails[0].value,
-                    password: null,
                     profilePicture: profile.photos[0].value,
                     topicsInterestedIn: [],
                 };
