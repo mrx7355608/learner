@@ -22,7 +22,6 @@ export default function passportSetup() {
                     fullname: `${profile.name.givenName} ${profile.name.familyName}`,
                     email: profile.emails[0].value,
                     profilePicture: profile.photos[0].value,
-                    topicsInterestedIn: [],
                 };
                 const newUser = await UserModel.create(newUserData);
                 return done(null, newUser);
